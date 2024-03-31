@@ -69,7 +69,7 @@ def ambiguous_symbols_off():
 
 # Asking user data
 number_of_passwords()
-length_of_password()
+length = length_of_password()
 if digits_on():
     chars += digits
 if uppercase_letters_on():
@@ -83,5 +83,12 @@ if ambiguous_symbols_off():
         if symbol in ambiguous_symbols:
             chars = chars.replace(symbol, '')
 
+
+def generate_password(psw_length, psw_chars):
+    return random.sample(psw_chars, psw_length)
+
+
 # Setting up generated passwords
 print(f'Available symbols: {chars}')
+
+print('Your password:', ''.join(generate_password(length, chars)))
