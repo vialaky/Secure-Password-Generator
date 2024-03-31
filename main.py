@@ -59,7 +59,7 @@ def punctuation_symbols_on():
         return False
 
 
-def ambiguous_symbols_on():
+def ambiguous_symbols_off():
     print(f'Should ambiguous symbols {ambiguous_symbols} be excluded (Y/N)?')
     if input().lower() in ['y', 'Y', 'д', 'Д']:
         return True
@@ -74,4 +74,4 @@ digits_on()
 uppercase_letters_on()
 lowercase_letters_on()
 punctuation_symbols_on()
-ambiguous_symbols_on()
+ambiguous_symbols_off()
