@@ -28,7 +28,7 @@ def length_of_password():
 
 
 def digits_on():
-    print(f'Should we include numbers {digits} (Y/N)?')
+    print(f'Should we include digits {digits} (Y/N)?')
     if input().lower() in ['y', 'Y', 'д', 'Д']:
         return True
     else:
@@ -70,8 +70,18 @@ def ambiguous_symbols_off():
 # Asking user data
 number_of_passwords()
 length_of_password()
-digits_on()
-uppercase_letters_on()
-lowercase_letters_on()
-punctuation_symbols_on()
-ambiguous_symbols_off()
+if digits_on():
+    chars += digits
+if uppercase_letters_on():
+    chars += uppercase_letters
+if lowercase_letters_on():
+    chars += lowercase_letters
+if punctuation_symbols_on():
+    chars += punctuation
+if ambiguous_symbols_off():
+    for symbol in chars:
+        if symbol in ambiguous_symbols:
+            chars = chars.replace(symbol, '')
+
+# Setting up generated passwords
+print(f'Available symbols: {chars}')
