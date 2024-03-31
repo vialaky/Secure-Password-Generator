@@ -67,7 +67,7 @@ def ambiguous_symbols_off():
         return False
 
 
-# Asking user data
+# Setting up generated passwords
 number = number_of_passwords()
 length = length_of_password()
 if digits_on():
@@ -87,9 +87,6 @@ if ambiguous_symbols_off():
 def generate_password(psw_length, psw_chars):
     return random.sample(psw_chars, psw_length)
 
-
-# Setting up generated passwords
-print(f'Available symbols: {chars}')
 
 # Password generation
 for _ in range(number):
