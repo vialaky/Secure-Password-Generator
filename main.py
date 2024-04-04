@@ -29,7 +29,7 @@ def length_of_password():
 
 def digits_on():
     print(f'Should we include digits {digits} (Y/N)?')
-    if input().lower() in ['y', 'Y', 'д', 'Д']:
+    if input().lower() == 'y':
         return True
     else:
         return False
@@ -37,7 +37,7 @@ def digits_on():
 
 def uppercase_letters_on():
     print(f'Should we include uppercase letters {uppercase_letters} (Y/N)?')
-    if input().lower() in ['y', 'Y', 'д', 'Д']:
+    if input().lower() == 'y':
         return True
     else:
         return False
@@ -45,7 +45,7 @@ def uppercase_letters_on():
 
 def lowercase_letters_on():
     print(f'Should we include lowercase letters {lowercase_letters} (Y/N)?')
-    if input().lower() in ['y', 'Y', 'д', 'Д']:
+    if input().lower() == 'y':
         return True
     else:
         return False
@@ -53,7 +53,7 @@ def lowercase_letters_on():
 
 def punctuation_symbols_on():
     print(f'Should we include punctuation symbols {punctuation} (Y/N)?')
-    if input().lower() in ['y', 'Y', 'д', 'Д']:
+    if input().lower() == 'y':
         return True
     else:
         return False
@@ -61,7 +61,7 @@ def punctuation_symbols_on():
 
 def ambiguous_symbols_off():
     print(f'Should ambiguous symbols {ambiguous_symbols} be excluded (Y/N)?')
-    if input().lower() in ['y', 'Y', 'д', 'Д']:
+    if input().lower() == 'y':
         return True
     else:
         return False
