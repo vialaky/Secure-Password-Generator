@@ -10,7 +10,7 @@ The program generates a specified number of passwords and includes smart setting
 - Integers (type int);
 - Variables;
 - Data input/output (input() and print() functions);
-- Conditional statement (if/elif/else);
+- Conditional statement (if/else);
 - for loop;
 - Writing custom functions;
 - Working with the random module to generate random numbers.
